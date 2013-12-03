@@ -852,7 +852,7 @@ START is the buffer position where the sexp starts."
                             (forward-char 1)
                             (not (python-syntax-context 'paren))))
                  (goto-char context-start)
-                 (current-indentation))))
+                 (+ (current-indentation) python-indent-offset))))
             ;; If open paren is contained on a line by itself add another
             ;; indentation level, else look for the first word after the
             ;; opening paren and use it's column position as indentation
