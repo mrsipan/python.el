@@ -869,7 +869,8 @@ START is the buffer position where the sexp starts."
                 ((progn
                    (back-to-indentation)
                    (looking-at (regexp-opt '(")" "]" "}"))))
-                 (- indent python-indent-offset))
+                 ;(- indent python-indent-offset))
+                 indent)
                 ;; If the line of the opening paren that wraps the current
                 ;; line starts a block add another level of indentation to
                 ;; follow new pep8 recommendation. See: http://ur1.ca/5rojx
